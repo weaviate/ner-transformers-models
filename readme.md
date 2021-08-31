@@ -95,3 +95,7 @@ docker build -f my-model.Dockerfile -t my-model-inference .
 That's it! You can now push your image to your favorite registry or reference
 it locally in your Weaviate `docker-compose.yaml` using the docker tag
 `my-model-inference`.
+
+# More Information
+
+For more information, visit the [official documentation](https://www.semi.technology/developers/weaviate/current/modules/).
