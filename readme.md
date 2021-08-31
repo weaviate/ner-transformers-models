@@ -34,6 +34,7 @@ The Weaviate NER Module then takes this output and processes this to GraphQL out
 |Model Name|Image Name|
 |---|---|
 |`bert-large-cased-finetuned-conll03-english` ([Info](https://huggingface.co/dbmdz/bert-large-cased-finetuned-conll03-english?text=Eric+H.+Taylor+writes+nothing))|`semitechnologies/bert-large-cased-finetuned-conll03-english`|
+| `dslim-bert-base-NER` ([Info](https://huggingface.co/dslim/bert-base-NER)) | `semitechnologies/dslim-bert-base-NER` | 
 
 ## Build Docker Container
 
@@ -95,3 +96,7 @@ docker build -f my-model.Dockerfile -t my-model-inference .
 That's it! You can now push your image to your favorite registry or reference
 it locally in your Weaviate `docker-compose.yaml` using the docker tag
 `my-model-inference`.
+
+# More Information
+
+For more information, visit the [official documentation](https://www.semi.technology/developers/weaviate/current/modules/).
