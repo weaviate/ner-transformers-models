@@ -14,13 +14,18 @@ jobs:
     # always run test, etc. for this model
     - env:
         MODEL_NAME: dbmdz/bert-large-cased-finetuned-conll03-english
-        MODEL_TAG_NAME: bert-large-cased-finetuned-conll03-english
+        MODEL_TAG_NAME: dbmdz-bert-large-cased-finetuned-conll03-english
       stage: buildanddeploy
 
-    # - env:
-    #     MODEL_NAME: dslim/bert-base-NER
-    #     MODEL_TAG_NAME: bert-base-NER
-    #   stage: buildanddeploy
+    - env:
+        MODEL_NAME: dslim/bert-base-NER
+        MODEL_TAG_NAME: dslim-bert-base-NER
+      stage: buildanddeploy
+
+    - name: Build the base for custom images
+      script: GIT_BRANCH=$TRAVIS_BRANCH GIT_TAG=$TRAVIS_TAG GIT_PULL_REQUEST=$TRAVIS_PULL_REQUEST cicd/build_custom_base.sh
+      stage: postbuild
+
 
 script:
 
