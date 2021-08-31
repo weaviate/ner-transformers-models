@@ -47,7 +47,7 @@ async def read_item(item: NerInput, response: Response):
                 "certainty": 0.9     # float
                 "startPosition": 1   # int
                 "endPosition: 2      # int
-            }]
+            }] # Or None
 
         text = "string"
         '''
