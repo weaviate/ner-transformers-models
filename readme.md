@@ -33,7 +33,7 @@ The Weaviate NER Module then takes this output and processes this to GraphQL out
 
 |Model Name|Image Name|
 |---|---|
-|`bert-large-cased-finetuned-conll03-english` ([Info](https://huggingface.co/dbmdz/bert-large-cased-finetuned-conll03-english?text=Eric+H.+Taylor+writes+nothing))|`semitechnologies/bert-large-cased-finetuned-conll03-english`|
+|`dbmdz-bert-large-cased-finetuned-conll03-english` ([Info](https://huggingface.co/dbmdz/bert-large-cased-finetuned-conll03-english?text=Eric+H.+Taylor+writes+nothing))|`semitechnologies/dbmdz-bert-large-cased-finetuned-conll03-english`|
 | `dslim-bert-base-NER` ([Info](https://huggingface.co/dslim/bert-base-NER)) | `semitechnologies/dslim-bert-base-NER` | 
 
 ## Build Docker Container
