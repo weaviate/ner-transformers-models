@@ -21,7 +21,11 @@ class Ner:
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
 
-        self.nlp = pipeline("ner", model=self.model, tokenizer=self.tokenizer, device=0)
+        self.device = -1
+        if cuda_support:
+            self.device =0
+
+        self.nlp = pipeline("ner", model=self.model, tokenizer=self.tokenizer, device=self.device)
 
 
     async def do(self, input: NerInput):
