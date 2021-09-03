@@ -21,7 +21,7 @@ class Ner:
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
 
-        self.nlp = pipeline("ner", model=self.model, tokenizer=self.tokenizer)
+        self.nlp = pipeline("ner", model=self.model, tokenizer=self.tokenizer, device=0)
 
 
     async def do(self, input: NerInput):
