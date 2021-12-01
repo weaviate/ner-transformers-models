@@ -15,17 +15,15 @@ class Ner:
         self.cuda = cuda_support
         self.cuda_core = cuda_core
         self.model = AutoModelForTokenClassification.from_pretrained(model_path)
+        device = -1
         if self.cuda:
             self.model.to(self.cuda_core)
+            device = int(cuda_core[5:]) # form is e.g. cuda:3
         self.model.eval() # make sure we're in inference mode, not training
 
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
 
-        self.device = -1
-        if cuda_support:
-            self.device =0
-
-        self.nlp = pipeline("ner", model=self.model, tokenizer=self.tokenizer, device=self.device)
+        self.nlp = pipeline("ner", model=self.model, tokenizer=self.tokenizer, device=device)
 
 
     async def do(self, input: NerInput):
