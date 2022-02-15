@@ -4,7 +4,7 @@ The inference container for the NER (Named Entity Recognition or Token Classific
 
 ## Information
 
-This is an inference container to use as model for the [Weaviate NER Module](https://www.semi.technology/developers/weaviate/current/modules/). 
+This is an inference container to use as model for the [Weaviate NER Module](https://weaviate.io/developers/weaviate/current/modules/). 
 
 This model works with [NER (Token Classification) Transformer models from Huggingface](https://huggingface.co/models?pipeline_tag=token-classification), such as [bert-base-NER](https://huggingface.co/dslim/bert-base-NER). The code for the application in this repo works well with models that take in a text input like `My name is Sarah and I live in London` and return information in JSON format like this:
 
@@ -44,7 +44,7 @@ LOCAL_REPO="ner-transformers" MODEL_NAME="dbmdz/bert-large-cased-finetuned-conll
 
 ## Choose your model
 
-**Make sure that the model gives the output as stated above, otherwise a good-working model isn't ensured!** You can always make a [custom inference container](https://www.semi.technology/developers/weaviate/current/modules/custom-modules.html#a-replace-parts-of-an-existing-module) (and take this repo as an example) or [custom Weaviate model](https://www.semi.technology/developers/contributor-guide/current/weaviate-module-system/how-to-build-a-new-module.html) if your NER model gives different outputs or you want to change the GraphQL design of the NER module entirely. 
+**Make sure that the model gives the output as stated above, otherwise a good-working model isn't ensured!** You can always make a [custom inference container](https://weaviate.io/developers/weaviate/current/modules/custom-modules.html#a-replace-parts-of-an-existing-module) (and take this repo as an example) or [custom Weaviate model](https://weaviate.io/developers/contributor-guide/current/weaviate-module-system/how-to-build-a-new-module.html) if your NER model gives different outputs or you want to change the GraphQL design of the NER module entirely. 
 
 ### Custom build with any token classification huggingface model
 
@@ -99,4 +99,4 @@ it locally in your Weaviate `docker-compose.yaml` using the docker tag
 
 # More Information
 
-For more information, visit the [official documentation](https://www.semi.technology/developers/weaviate/current/modules/).
+For more information, visit the [official documentation](https://weaviate.io/developers/weaviate/current/modules/).
