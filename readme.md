@@ -2,9 +2,11 @@
 
 The inference container for the NER (Named Entity Recognition or Token Classification) Weaviate module.
 
-## Information
+## Documentation
 
-This is an inference container to use as model for the [Weaviate NER Module](https://weaviate.io/developers/weaviate/current/modules/). 
+Documentation for this module can be found [here](https://weaviate.io/developers/weaviate/current/retriever-vectorizer-modules/text2vec-transformers.html).
+
+## Information
 
 This model works with [NER (Token Classification) Transformer models from Huggingface](https://huggingface.co/models?pipeline_tag=token-classification), such as [bert-base-NER](https://huggingface.co/dslim/bert-base-NER). The code for the application in this repo works well with models that take in a text input like `My name is Sarah and I live in London` and return information in JSON format like this:
 
