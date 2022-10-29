@@ -55,10 +55,7 @@ class Ner:
         
         for item in ner_results:
             # convert numpy.int64 values to native python int values
-            item["start"] = item["start"].item()
-            item["end"] = item["end"].item()
-
-            item['certainty'] = item.pop('score')
+            item['certainty'] = float(item.pop('score'))
             item['startPosition'] = item.pop('start')
             item['endPosition'] = item.pop('end')
             del item['index']
