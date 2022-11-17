@@ -22,6 +22,11 @@ jobs:
         MODEL_TAG_NAME: dslim-bert-base-NER
       stage: buildanddeploy
 
+    - env:
+        MODEL_NAME: fhswf/bert_de_ner
+        MODEL_TAG_NAME: fhswf-bert-de-ner
+      stage: buildanddeploy
+
     - name: Build the base for custom images
       script: GIT_BRANCH=$TRAVIS_BRANCH GIT_TAG=$TRAVIS_TAG GIT_PULL_REQUEST=$TRAVIS_PULL_REQUEST cicd/build_custom_base.sh
       stage: postbuild
