@@ -20,8 +20,8 @@ jobs:
         include:
           - model_name: dbmdz/bert-large-cased-finetuned-conll03-english
             model_tag_name: dbmdz-bert-large-cased-finetuned-conll03-english
-          # - model_name: dslim/bert-base-NER
-          #   model_tag_name: dslim-bert-base-NER
+          - model_name: dslim/bert-base-NER
+            model_tag_name: dslim-bert-base-NER
     env:
       LOCAL_REPO: ner-transformers
       REMOTE_REPO: semitechnologies/ner-transformers
