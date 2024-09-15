@@ -1,4 +1,11 @@
-models
 .DS_Store
-DS_Store
 __pycache__
+models
+.venv
+.git
+.github
+cicd
+requirements-test.txt
+Dockerfile
+custom.Dockerfile
+smoke_test.py

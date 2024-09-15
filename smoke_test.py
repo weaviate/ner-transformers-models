@@ -52,7 +52,7 @@ class SmokeTest(unittest.TestCase):
 
         self.assertEqual(200, res.status_code)
         self.assertEqual(req_body['text'], resBody['text'])
-        self.assertIsNone(resBody['tokens'])
+        self.assertTrue(resBody['tokens'] is None or resBody['tokens'] == [])
 
 
 if __name__ == "__main__":

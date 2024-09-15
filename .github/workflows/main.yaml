@@ -22,6 +22,8 @@ jobs:
             model_tag_name: dbmdz-bert-large-cased-finetuned-conll03-english
           - model_name: dslim/bert-base-NER
             model_tag_name: dslim-bert-base-NER
+          - model_name: urchade/gliner_multi-v2.1
+            model_tag_name: urchade-gliner_multi-v2.1
     env:
       LOCAL_REPO: ner-transformers
       REMOTE_REPO: semitechnologies/ner-transformers

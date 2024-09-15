@@ -1,5 +1,7 @@
 pydantic==1.10.7
-transformers==4.28.1
+transformers==4.38.2
 torch==2.0.0
 fastapi==0.95.1
 uvicorn==0.21.1
+gliner==0.2.11
+numpy==1.25.2

@@ -15,6 +15,15 @@ def startup_event():
     global ner
     global meta_config
 
+    model_dir = "./models/model"
+
+    def get_model_name() -> (str):
+        if os.path.exists(f"{model_dir}/model_name"):
+            with open(f"{model_dir}/model_name", "r") as f:
+                model_name = f.read()
+                return model_name
+        return ""
+
     cuda_env = os.getenv("ENABLE_CUDA")
     cuda_support=False
     cuda_core=""
@@ -28,8 +37,8 @@ def startup_event():
     else:
         logger.info("Running on CPU")
 
-    ner = Ner('./models/model', cuda_support, cuda_core)
-    meta_config = Meta('./models/model')
+    ner = Ner(model_dir, get_model_name(), cuda_support, cuda_core)
+    meta_config = Meta(model_dir, get_model_name())
 
 
 @app.get("/.well-known/live", response_class=Response)
@@ -43,6 +52,7 @@ def meta():
     return meta_config.get()
 
 
+@app.post("/ner")
 @app.post("/ner/")
 async def read_item(item: NerInput, response: Response):
     try:
